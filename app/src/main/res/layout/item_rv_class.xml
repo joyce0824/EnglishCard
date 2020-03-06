@@ -3,30 +3,31 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="100dp"
     android:layout_margin="6dp"
     android:padding="6dp"
-    app:cardBackgroundColor="#ffdddddd"
+    app:cardBackgroundColor="#b3e5fc"
     app:cardCornerRadius="20dp"
     app:cardElevation="6dp">
-
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp" >
+        android:layout_height="match_parent" >
         <TextView
             android:id="@+id/tv_class"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="class1"
             android:textSize="30dp"
+            android:layout_centerVertical="true"
             android:gravity="center"
             android:textColor="@color/cardview_dark_background"/>
         <ImageButton
             android:id="@+id/iBtn_play"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
             android:src="@drawable/ic_play_circle_outline_black_24dp"
-            />
+            android:background="@null" />
 
     </RelativeLayout>
 

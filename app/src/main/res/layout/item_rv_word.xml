@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="6dp"
+    android:layout_gravity="center_vertical"
+    android:background="#f0f4c3"
+    android:padding="6dp"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="6dp">
+
+    <ImageButton
+        android:id="@+id/iBtn_play"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:background="@null"
+        android:padding="5dp"
+        android:src="@drawable/ic_play_circle_outline_black_24dp" />
+
+    <TextView
+        android:id="@+id/tv_en"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_toRightOf="@+id/iBtn_play"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/bg_area"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="American"
+        android:textColor="@color/cardview_dark_background"
+        android:textSize="30dp" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_en">
+
+        <include
+            android:id="@+id/v_week1"
+            layout="@layout/item_gv_day"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <include
+            android:id="@+id/v_week2"
+            layout="@layout/item_gv_day"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <include
+            android:id="@+id/v_week3"
+            layout="@layout/item_gv_day"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </TableLayout>
+
+</RelativeLayout>
