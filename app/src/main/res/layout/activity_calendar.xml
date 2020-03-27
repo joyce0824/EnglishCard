@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".calendar.CalendarActivity">
+
+    <ImageButton
+        android:id="@+id/ibtnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@null"
+        android:src="@drawable/ic_keyboard_arrow_left_black_24dp" />
+
+    <CalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvNoData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#b2dfdb"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="你偷懶，沒資料"
+        android:textSize="15dp" />
+
+    <ListView
+        android:id="@+id/lvHistory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="#00ffffff"
+        android:dividerHeight="5dp" />
+</LinearLayout>

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">EnglishCards</string>
+    <string name="app_name">englishCards</string>
     <string name="title_activity_home">HomeActivity</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -14,5 +14,29 @@
     <string name="menu_book4">Book 4</string>
 
     <string name="home_second">Home Second</string>
+    <string-array name="right_answer">
+        <item>好棒答對了, 發音是 </item>
+        <item>這麼難你都會, 發音是 </item>
+        <item>天才就是你, 發音是 </item>
+        <item>你媽為你開心, 發音是 </item>
+        <item>你頭腦真棒, 發音是 </item>
+        <item>你真棒,你真棒,你真棒, 發音是 </item>
+        <item>給你拍拍手, 發音是 </item>
+        <item>給你放煙火, 發音是 </item>
+    </string-array>
 
+    <string-array name="wrong_answer">
+        <item>GG 答錯了, 答案是</item>
+        <item>這麼簡單也不會, 答案是</item>
+        <item>有事嗎, 答案是</item>
+        <item>人笨就要加油, 答案是</item>
+        <item>你頭腦有洞嗎, 答案是</item>
+        <item>很重要,很重要,很重要, 答案是</item>
+        <item>你這樣分數會不開心, 答案是</item>
+        <item>逼逼逼,你錯了, 答案是</item>
+        <item>老天鵝呀 這你也不會, 答案是</item>
+        <item>這麼笨,你媽知道嗎？, 答案是</item>
+    </string-array>
+
+    <string name="dummy_data">[{"className":"class_1","data":[{"en":"baby","ch":"嬰兒","studyDay":["",""]},{"en":"child","ch":"小孩(單)","studyDay":["",""]},{"en":"children","ch":"小孩(複數)","studyDay":["",""]},{"en":"person","ch":"人","studyDay":["",""]},{"en":"stranger","ch":"陌生人","studyDay":["",""]},{"en":"king","ch":"國王","studyDay":["",""]},{"en":"queen","ch":"王后","studyDay":["",""]},{"en":"foot","ch":"腳","studyDay":["",""]},{"en":"feet","ch":"腳(複數)","studyDay":["",""]},{"en":"hair","ch":"頭髮","studyDay":["",""]},{"en":"mouth","ch":"嘴巴","studyDay":["",""]},{"en":"stomach","ch":"胃","studyDay":["",""]},{"en":"tooth","ch":"牙齒","studyDay":["",""]},{"en":"teeth","ch":"牙齒(複數)","studyDay":["",""]},{"en":"arm","ch":"手臂","studyDay":["",""]},{"en":"back","ch":"背部後面","studyDay":["",""]},{"en":"body","ch":"身體","studyDay":["",""]},{"en":"ear","ch":"耳朵","studyDay":["",""]},{"en":"face","ch":"臉","studyDay":["",""]},{"en":"finger","ch":"手指","studyDay":["",""]},{"en":"lip","ch":"嘴唇","studyDay":["",""]},{"en":"neck","ch":"頸部","studyDay":["",""]},{"en":"shoulder","ch":"肩膀","studyDay":["",""]},{"en":"headache","ch":"頭痛","studyDay":["",""]},{"en":"health","ch":"健康","studyDay":["",""]},{"en":"medicine","ch":"藥","studyDay":["",""]},{"en":"cold","ch":"感冒","studyDay":["",""]},{"en":"life","ch":"生活生命","studyDay":["",""]},{"en":"husband","ch":"丈夫","studyDay":["",""]},{"en":"parents","ch":"父母","studyDay":["",""]},{"en":"wife","ch":"妻子","studyDay":["",""]},{"en":"aunt","ch":"姑姑阿姨","studyDay":["",""]},{"en":"cousin","ch":"堂兄弟姊妹","studyDay":["",""]},{"en":"daughter","ch":"女兒","studyDay":["",""]},{"en":"grandfather","ch":"祖父","studyDay":["",""]},{"en":"grandmother","ch":"祖母","studyDay":["",""]},{"en":"uncle","ch":"叔伯父","studyDay":["",""]},{"en":"hundred","ch":"百","studyDay":["",""]},{"en":"million","ch":"百萬","studyDay":["",""]},{"en":"unmber","ch":"數字","studyDay":["",""]},{"en":"thousand","ch":"千","studyDay":["",""]},{"en":"date","ch":"日期約會","studyDay":["",""]},{"en":"moment","ch":"時刻","studyDay":["",""]},{"en":"evening","ch":"傍晚","studyDay":["",""]}]},{"className":"class_2","data":[{"en":"Monday","ch":"星期一","studyDay":["",""]},{"en":"Tuesday","ch":"星期二","studyDay":["",""]},{"en":"Wednesday","ch":"星期三","studyDay":["",""]},{"en":"Thursday","ch":"星期四","studyDay":["",""]},{"en":"Friday","ch":"星期五","studyDay":["",""]},{"en":"Saturday","ch":"星期六","studyDay":["",""]},{"en":"Sunday","ch":"星期日","studyDay":["",""]},{"en":"clock","ch":"時鐘","studyDay":["",""]},{"en":"season","ch":"季節","studyDay":["",""]},{"en":"spring","ch":"春","studyDay":["",""]},{"en":"fall","ch":"秋","studyDay":["",""]},{"en":"half","ch":"一半","studyDay":["",""]},{"en":"past","ch":"經過","studyDay":["",""]},{"en":"change","ch":"零錢改變","studyDay":["",""]},{"en":"price","ch":"價格","studyDay":["",""]},{"en":"cent","ch":"分","studyDay":["",""]},{"en":"chocolate","ch":"巧克力","studyDay":["",""]},{"en":"icecream","ch":"冰淇凌","studyDay":["",""]},{"en":"juice","ch":"果汁","studyDay":["",""]},{"en":"meal","ch":"餐","studyDay":["",""]},{"en":"menu","ch":"菜單","studyDay":["",""]},{"en":"noodle","ch":"麵條","studyDay":["",""]},{"en":"rice","ch":"米","studyDay":["",""]},{"en":"sandwich","ch":"三明治","studyDay":["",""]},{"en":"snack","ch":"零食","studyDay":["",""]},{"en":"snake","ch":"蛇","studyDay":["",""]},{"en":"soup","ch":"湯","studyDay":["",""]},{"en":"vegetable","ch":"蔬菜","studyDay":["",""]},{"en":"water","ch":"水","studyDay":["",""]},{"en":"fruit","ch":"水果","studyDay":["",""]},{"en":"candy","ch":"糖果","studyDay":["",""]},{"en":"drink","ch":"飲料","studyDay":["",""]},{"en":"Coke","ch":"可樂","studyDay":["",""]},{"en":"juice","ch":"果汁","studyDay":["",""]},{"en":"ham","ch":"火腿","studyDay":["",""]},{"en":"hen","ch":"母雞","studyDay":["",""]},{"en":"hamburger","ch":"漢堡","studyDay":["",""]},{"en":"hotdog","ch":"熱狗","studyDay":["",""]},{"en":"ice","ch":"冰","studyDay":["",""]},{"en":"fish","ch":"魚肉","studyDay":["",""]},{"en":"pork","ch":"豬肉","studyDay":["",""]},{"en":"popcorn","ch":"爆米花","studyDay":["",""]},{"en":"salad","ch":"沙拉","studyDay":["",""]},{"en":"salt","ch":"糖","studyDay":["",""]},{"en":"sugar","ch":"糖","studyDay":["",""]},{"en":"chopsticks","ch":"筷子","studyDay":["",""]},{"en":"dish","ch":"盤子","studyDay":["",""]},{"en":"fork","ch":"叉子","studyDay":["",""]},{"en":"spoon","ch":"湯匙","studyDay":["",""]},{"en":"clothes","ch":"衣服","studyDay":["",""]},{"en":"glove","ch":"手套","studyDay":["",""]},{"en":"jacket","ch":"夾克","studyDay":["",""]},{"en":"jeans","ch":"牛仔褲","studyDay":["",""]},{"en":"shoes","ch":"鞋子","studyDay":["",""]},{"en":"sweater","ch":"毛衣","studyDay":["",""]},{"en":"weather","ch":"天氣","studyDay":["",""]},{"en":"uniform","ch":"制服","studyDay":["",""]},{"en":"from","ch":"從","studyDay":["",""]},{"en":"form","ch":"表格類型","studyDay":["",""]}]}]</string>
 </resources>

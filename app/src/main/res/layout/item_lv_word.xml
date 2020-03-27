@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:background="#b2dfdb"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="6dp">
+
+    <ImageButton
+        android:id="@+id/iBtn_play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:layout_centerVertical="true"
+        android:padding="5dp"
+        android:src="@drawable/ic_play_circle_outline_black_24dp" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:background="@drawable/bg_area"
+        android:layout_toRightOf="@+id/iBtn_play"
+        android:layout_centerVertical="true"
+        android:layout_height="50dp">
+    <TextView
+        android:id="@+id/tv_en"
+        android:layout_width="0dp"
+        android:layout_weight="3"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@+id/iBtn_play"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="American"
+        android:textColor="#757575"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/tv_ch"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/bg_area"
+        android:gravity="center"
+        android:text="美國"
+        android:layout_below="@+id/tv_en"
+        android:textColor="#757575"
+        android:textSize="20dp" />
+
+    </LinearLayout>
+</RelativeLayout>

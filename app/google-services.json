@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "871276784354",
+    "firebase_url": "https://englishcards-44d65.firebaseio.com",
+    "project_id": "englishcards-44d65",
+    "storage_bucket": "englishcards-44d65.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:871276784354:android:9ed8da390043a8c032ccbb",
+        "android_client_info": {
+          "package_name": "com.practice.englishcards"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "871276784354-pgoefgc6k5mcf9pghrb612ldk1p279lr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAoLLrMA12kBh_1AqQkhH-MP15mE-JQHz4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "871276784354-pgoefgc6k5mcf9pghrb612ldk1p279lr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

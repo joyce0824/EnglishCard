@@ -9,8 +9,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.practice.englishcards.module.DataEntry;
 import com.practice.englishcards.R;
+import com.practice.englishcards.db.entry.WordItem;
 import com.socks.library.KLog;
 
 import java.util.ArrayList;
@@ -18,11 +18,12 @@ import java.util.List;
 
 public class RvWordAdapter extends RecyclerView.Adapter<RvWordAdapter.ClassViewHolder> {
 
-    private List<DataEntry.Vocabulary> entries;
-    private OnPlayListener playListener;
-    private onAnswerListener onAnswerListener;
+    private List<WordItem> entries;
+    private Interfaces.OnPlayListener playListener;
+    private Interfaces.OnAnswerListener onAnswerListener;
 
-    public RvWordAdapter(List<DataEntry.Vocabulary> data) {
+
+    public RvWordAdapter(List<WordItem> data) {
         entries = data;
         KLog.i("JOJO", "getClassName :" + entries.size());
     }
@@ -37,9 +38,9 @@ public class RvWordAdapter extends RecyclerView.Adapter<RvWordAdapter.ClassViewH
 
     @Override
     public void onBindViewHolder(@NonNull ClassViewHolder holder, final int position) {
-        DataEntry.Vocabulary vocabulary = entries.get(position);
-        holder.tvEn.setText(vocabulary.En);
-        holder.tvPlay.setOnClickListener(new View.OnClickListener() {
+        WordItem vocabulary = entries.get(position);
+        holder.tvEn.setText(vocabulary.en);
+        holder.iBtnPlay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 playListener.onPlayListener(view, position);
@@ -52,9 +53,8 @@ public class RvWordAdapter extends RecyclerView.Adapter<RvWordAdapter.ClassViewH
                 onAnswerListener.showOptionDialog(position);
             }
         });
-
-        holder.answer = vocabulary.Ch;
-        holder.setDays(vocabulary.getStudyDay());
+        holder.answer = vocabulary.ch;
+//        holder.setDays(vocabulary.getStudyDay());
     }
 
     @Override
@@ -62,16 +62,16 @@ public class RvWordAdapter extends RecyclerView.Adapter<RvWordAdapter.ClassViewH
         return entries.size();
     }
 
-    public void setPlayListener(OnPlayListener listener) {
+    public void setPlayListener(Interfaces.OnPlayListener listener) {
         playListener = listener;
     }
 
-    public void setOnAnswerListener(onAnswerListener listener) {
+    public void setOnAnswerListener(Interfaces.OnAnswerListener listener) {
         onAnswerListener = listener;
     }
 
     public class ClassViewHolder extends RecyclerView.ViewHolder {
-        public ImageButton tvPlay;
+        public ImageButton iBtnPlay;
         public TextView tvEn;
         public View w1, w2, w3;
         public String answer = "";
@@ -81,7 +81,7 @@ public class RvWordAdapter extends RecyclerView.Adapter<RvWordAdapter.ClassViewH
         public ClassViewHolder(@NonNull View itemView) {
             super(itemView);
             this.itemView = itemView;
-            tvPlay = itemView.findViewById(R.id.iBtn_play);
+            iBtnPlay = itemView.findViewById(R.id.iBtn_play);
             tvEn = itemView.findViewById(R.id.tv_en);
             w1 = itemView.findViewById(R.id.v_week1);
             w2 = itemView.findViewById(R.id.v_week2);
@@ -113,14 +113,6 @@ public class RvWordAdapter extends RecyclerView.Adapter<RvWordAdapter.ClassViewH
             return tvIDs;
         }
 
-    }
-
-    public interface OnPlayListener {
-        void onPlayListener(View v, int position);
-    }
-
-    public interface onAnswerListener {
-        void showOptionDialog(int position);
     }
 
 

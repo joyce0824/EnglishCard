@@ -9,34 +9,37 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.practice.englishcards.module.DataEntry;
+import com.practice.englishcards.db.entry.Classes;
 import com.practice.englishcards.R;
-import com.socks.library.KLog;
 
 import java.util.List;
 
 public class RvClassAdapter extends RecyclerView.Adapter<RvClassAdapter.ClassViewHolder> {
 
-    private List<DataEntry> entries;
-    private OnPlayListener playListener;
-    private OnItemClickListener onItemClickListener;
-    public RvClassAdapter(List<DataEntry> data) {
-        entries = data;
-        KLog.i("JOJO","getClassName :"+entries.size());
+//    private List<ClassItem> entries;
+    private List<Classes> dbeEntries;
+    private Interfaces.OnPlayListener playListener;
+    private Interfaces.OnItemClickListener onItemClickListener;
+    private Interfaces.OnBugClickListener onBugClickListener;
+
+//    public RvClassAdapter(List<ClassItem> data) {
+//        entries = data;
+//    }
+
+    public RvClassAdapter(List<Classes> data) {
+        dbeEntries = data;
     }
 
     @NonNull
     @Override
     public ClassViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        KLog.i("JOJO","getClassName :"+entries.size());
         View view  = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_rv_class, parent, false);
         return new ClassViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ClassViewHolder holder, final int position) {
-        KLog.i("JOJO","getClassName :"+entries.get(position).getClassName());
-        holder.tvClassName.setText(entries.get(position).getClassName());
+//        holder.tvClassName.setText(entries.get(position).getClassName());
         holder.iBtnPlay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -50,24 +53,35 @@ public class RvClassAdapter extends RecyclerView.Adapter<RvClassAdapter.ClassVie
             }
         });
 
+        holder.ibtnBug.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBugClickListener.onBugClick(view,position);
+            }
+        });
+
+        holder.tvClassName.setText(dbeEntries.get(position).getTime());
     }
 
     @Override
     public int getItemCount() {
-        KLog.i("JOJO","size :"+entries.size());
-        return entries.size();
+        return dbeEntries.size();
     }
 
-    public void setPlayListener(OnPlayListener listener){
+    public void setPlayListener(Interfaces.OnPlayListener listener){
         playListener = listener;
     }
 
-    public void setOnItemClickListener(OnItemClickListener listener){
+    public void setOnItemClickListener(Interfaces.OnItemClickListener listener){
         onItemClickListener = listener;
     }
 
+    public void setOnBugClickListener(Interfaces.OnBugClickListener listener){
+        onBugClickListener = listener;
+    }
+
     public class ClassViewHolder extends RecyclerView.ViewHolder{
-        public ImageButton iBtnPlay;
+        public ImageButton iBtnPlay ,ibtnBug;
         public TextView tvClassName;
         public View itemView;
 
@@ -75,19 +89,8 @@ public class RvClassAdapter extends RecyclerView.Adapter<RvClassAdapter.ClassVie
             super(itemView);
             this.itemView = itemView;
             iBtnPlay =  itemView.findViewById(R.id.iBtn_play);
+            ibtnBug = itemView.findViewById(R.id.iBtn_bug);
             tvClassName = itemView.findViewById(R.id.tv_class);
-
         }
     }
-
-    public interface OnPlayListener{
-        void onPlayListener(View v, int position);
-    }
-
-    public interface OnItemClickListener {
-        void onItemClick(View view, int position);
-    }
-
-
-
 }

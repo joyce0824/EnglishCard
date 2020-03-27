@@ -2,8 +2,9 @@ package com.practice.englishcards.utils;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+import com.practice.englishcards.classes.module.ApiResponse;
+import com.socks.library.KLog;
 
-import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -11,7 +12,6 @@ import java.util.List;
 /**
  * 參考網址
  * https://segmentfault.com/a/1190000009523164
- *
  */
 
 public class GsonUtil {
@@ -19,17 +19,18 @@ public class GsonUtil {
     public GsonUtil() {
     }
 
-    public static <T>T fromJson(String json,Class<T> type){
+    public static <T> T fromJson(String json, Class<T> type) {
         Gson gson = new Gson();
-        return gson.fromJson(json,type);
+        return gson.fromJson(json, type);
     }
 
     /**
-     *  jsonString = ["Android","Java","PHP"]
+     * jsonString = ["Android","Java","PHP"]
      */
-    public static <T> ArrayList<T> listFromJson(String jsonString){
+    public static <T> ArrayList<T> listFromJson(String jsonString) {
         Gson gson = new Gson();
-        return gson.fromJson(jsonString, new TypeToken<ArrayList<T>>(){}.getType());
+        return gson.fromJson(jsonString, new TypeToken<ArrayList<T>>() {
+        }.getType());
     }
 
     /**
@@ -37,6 +38,9 @@ public class GsonUtil {
      */
     public static <T> List<T> stringToArray(String s, Class<T[]> clazz) {
         T[] arr = new Gson().fromJson(s, clazz);
+        KLog.i("TAG", "s :" + s);
+        KLog.i("TAG", "s :" + arr);
+        KLog.i("TAG", "s :" + Arrays.asList(arr));
         return Arrays.asList(arr); //or return Arrays.asList(new Gson().fromJson(s, clazz)); for a one-liner
     }
     /**
@@ -62,7 +66,7 @@ public class GsonUtil {
 //    }
 
     // 处理 data 为 object 的情况
-    public static <T> Result<T> fromJsonObject(Reader reader, Class<T> clazz) {}
+//    public static <T> ApiResponse<T> fromJsonObject(Reader reader, Class<T> clazz) {}
     // 处理 data 为 array 的情况
-    public static <T> Result<List<T>> fromJsonArray(Reader reader, Class<T> clazz){}
+//    public static <T> Result<List<T>> fromJsonArray(Reader reader, Class<T> clazz){}
 }

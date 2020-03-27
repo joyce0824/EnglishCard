@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'  //firebase
 
 android {
     compileSdkVersion 29
@@ -41,4 +42,7 @@ dependencies {
     implementation 'com.github.zhaokaiqiang.klog:library:1.6.0'
     // Gson
     implementation 'com.google.code.gson:gson:2.8.2'
+    // Firebase SDK for Google Analytics
+    implementation 'com.google.firebase:firebase-analytics:17.2.2'
+    implementation 'com.google.firebase:firebase-database:19.2.1'
 }
